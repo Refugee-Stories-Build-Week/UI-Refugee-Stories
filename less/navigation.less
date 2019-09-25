@@ -20,7 +20,7 @@
     .flex(space-around,center);
     width: 65%;
 
-    a {
+    a, span{
         color: @beige;
         font-family: @navfont;
         font-weight: bolder;
@@ -30,7 +30,12 @@
             color:@red;
         }
 
-        @media (max-width:800px) {
+        @media @laptop {
+            font-size: 1.7rem;
+        }
+
+
+        @media @tablet {
             font-size: 1.5rem;
         }
 
@@ -41,6 +46,8 @@
             font-size: 0.98rem;
         }
     }
+
+   
 
 
 }

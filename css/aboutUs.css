@@ -1,3 +1,27 @@
+.box-shadow {
+  box-shadow: 5px 5px 5px #aaaaaa;
+}
+.btn {
+  height: 50px;
+  background: #3c3c54;
+  border: none;
+  color: #ffeedb;
+  font-size: 1.8rem;
+  border-radius: 20px;
+  outline: none;
+  margin-top: 10px;
+  box-shadow: 5px 5px 5px #aaaaaa;
+}
+.btn:hover {
+  color: #e04f56;
+}
+@media (max-width:500px) {
+  .btn {
+    width: 120px;
+    height: 30px;
+    font-size: 1.3rem;
+  }
+}
 /* 
 html5doctor.com Reset Stylesheet
 v1.6.1
@@ -175,6 +199,7 @@ html h4,
 html h5 {
   font-family: 'Indie Flower', cursive;
   line-height: 1.5;
+  color: #3c3c54;
 }
 h1 {
   font-size: 3rem;
@@ -238,23 +263,33 @@ img {
   align-items: center;
   width: 65%;
 }
-.nav-bar a {
+.nav-bar a,
+.nav-bar span {
   color: #ffeedb;
   font-family: 'Indie Flower', cursive;
   font-weight: bolder;
   font-size: 2.5rem;
   text-decoration: none;
 }
-.nav-bar a:hover {
+.nav-bar a:hover,
+.nav-bar span:hover {
   color: #e04f56;
 }
-@media (max-width: 800px) {
-  .nav-bar a {
+@media (max-width:1100px) {
+  .nav-bar a,
+  .nav-bar span {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width:800px) {
+  .nav-bar a,
+  .nav-bar span {
     font-size: 1.5rem;
   }
 }
 @media (max-width:500px) {
-  .nav-bar a {
+  .nav-bar a,
+  .nav-bar span {
     font-size: 0.98rem;
   }
 }
@@ -291,6 +326,10 @@ section {
   padding-bottom: 40px;
   background: rgba(90, 93, 128, 0.07);
   border-bottom: 2px #3c3c54 dotted;
+  text-align: center;
+}
+.content .aboutUs {
+  font-size: 5rem !important;
 }
 @media (max-width:500px) {
   .content h2 {
@@ -324,7 +363,7 @@ section {
     flex-wrap: wrap;
   }
 }
-.stu {
+.web-names .stu {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -336,8 +375,13 @@ section {
   border-radius: 5px;
   box-shadow: 3px 3px 5px #aaaaaa;
 }
+@media (max-width:1100px) {
+  .web-names .stu {
+    width: 160px;
+  }
+}
 @media (max-width:800px) {
-  .stu {
+  .web-names .stu {
     width: 30%;
     transition: none;
     height: auto;
@@ -346,40 +390,53 @@ section {
   }
 }
 @media (max-width:500px) {
-  .stu {
+  .web-names .stu {
     width: 40%;
+    height: auto;
+    padding-bottom: 10px;
   }
 }
-.stu:hover {
+.web-names .stu:hover {
   height: 300px;
 }
 @media (max-width:800px) {
-  .stu:hover {
+  .web-names .stu:hover {
     height: auto;
   }
 }
-.stu h3 {
+.web-names .stu h3 {
   padding-top: 8px;
   padding-bottom: 15px;
   font-size: 2.3rem;
 }
+@media (max-width:1100px) {
+  .web-names .stu h3 {
+    font-size: 1.9rem;
+  }
+}
 @media (max-width:500px) {
-  .stu h3 {
+  .web-names .stu h3 {
     font-size: 1.6rem;
     padding-bottom: 5px;
   }
 }
-.stu img {
+.web-names .stu img {
   width: 170px;
 }
+@media (max-width:1100px) {
+  .web-names .stu img {
+    width: 150px;
+  }
+}
 @media (max-width:500px) {
-  .stu img {
+  .web-names .stu img {
     width: 110px;
   }
 }
-.stu p {
+.web-names .stu p {
   width: 100%;
   text-align: center;
+  font-family: 'Indie Flower', cursive;
 }
 .Developer .stu1 {
   background: rgba(0, 119, 255, 0.3);
@@ -407,21 +464,28 @@ section {
 }
 .viewbtn button {
   height: 50px;
-  width: 200px;
   background: #3c3c54;
   border: none;
   color: #ffeedb;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   border-radius: 20px;
   outline: none;
   margin-top: 10px;
   box-shadow: 5px 5px 5px #aaaaaa;
+  width: 200px;
 }
 .viewbtn button:hover {
   color: #e04f56;
 }
+@media (max-width:500px) {
+  .viewbtn button {
+    width: 120px;
+    height: 30px;
+    font-size: 1.3rem;
+  }
+}
 @media (max-width:800px) {
-  button {
+  .viewbtn button {
     display: none;
   }
 }

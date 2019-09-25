@@ -1,15 +1,21 @@
 
+
+//  ================ Styling each section ===============
 section {
     .flex(center, center);
     flex-direction: column;
     width: 100%;
 }
 
+
+//  =============== The hope Image Style ====================
 .aboutus-img {
     margin-top: 30px;
     
 }
 
+
+//  =============== Styling the main content ===========
 .content {
     color: @darkPurple;
     width: 95%;
@@ -18,19 +24,21 @@ section {
     padding-bottom: 40px;
     background: @lightBeige;
     border-bottom: 2px @darkPurple dotted;
+    text-align: center;
+
+    .aboutUs {
+        font-size: 5rem !important;
+    }
 
     @media @mobile {
         h2 {
             font-size: 1.5rem;
         }
     }
-
-
-
 }
 
 
-
+//  =========== the big container of the developers names ==============
 .Developer {
     width: 100%;
     height: 500px;
@@ -52,6 +60,8 @@ section {
  
 }
 
+
+
 .web-names {
     .flex(space-around, start);
 
@@ -59,124 +69,129 @@ section {
         flex-wrap: wrap;
     }
 
+
+    //   ================ Styling each name developer individual ============== 
+
+    .stu {
+        .flex(start,center);
+        flex-direction: column;
+        width:200px;
+        height: 45px;
+        transition: height 2s;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 3px 3px  5px #aaaaaa;
+
+        @media @laptop {
+            width: 160px;
+        }
+
+
+        @media @tablet {
+            width: 30%;
+            transition: none;
+            height: auto;
+            margin-bottom: 20px;
+            overflow: inherit;
+        }
+
+
+        @media @mobile {
+            width: 40%;
+            height: auto;
+            padding-bottom: 10px;
+
+        }
+
+
+        &:hover {
+            height: 300px; 
+
+            
+            @media @tablet {
+                height: auto;
+            }
+
+        }
+
+
+        h3 {
+            padding-top: 8px;
+            padding-bottom: 15px;
+            font-size: 2.3rem;
+
+            @media @laptop {
+                    font-size: 1.9rem;
+            }
+
+            @media @mobile {
+                font-size: 1.6rem;
+                padding-bottom: 5px;
+            }
+       
+        }
+
+        img {
+            width: 170px;
+
+            @media @laptop {
+                width: 150px;
+            }
+
+            @media @mobile {
+                width: 110px;
+            }
+        }
+
+        p {
+            width: 100%;
+            text-align: center;
+            font-family: 'Indie Flower', cursive;
+        }
+        
+    }
 }
 
-.stu {
-    .flex(start,center);
-    flex-direction: column;
-    width:200px;
-    height: 45px;
-    transition: height 2s;
-    overflow: hidden;
-    border-radius: 5px;
-    box-shadow: 3px 3px  5px #aaaaaa;
+// ============== Background coloring for each developer name =================
 
+.Developer {
 
-    @media @tablet {
-        width: 30%;
-        transition: none;
-        height: auto;
-        margin-bottom: 20px;
-        overflow: inherit;
+    .stu1 {
+        background: rgba(0, 119, 255, 0.3);
     }
 
-
-    @media @mobile {
-        width: 40%;
-
+    .stu2 {
+        background: rgba(0, 255, 0, 0.3);
     }
 
-
-    &:hover {
-        height: 300px; 
-
-        
-        @media @tablet {
-            height: auto;
-        }
-
+    .stu3 {
+        background: rgba(218, 8, 218, 0.3);
     }
 
-
-    h3 {
-        padding-top: 8px;
-        padding-bottom: 15px;
-        font-size: 2.3rem;
-
-        @media @mobile {
-            font-size: 1.6rem;
-            padding-bottom: 5px;
-        }
-       
-    }
-
-    img {
-        width: 170px;
-
-        @media @mobile {
-            width: 110px;
-        }
-    }
-
-    p {
-        width: 100%;
-        text-align: center;
+    .stu4 {
+        background: rgba(255, 0, 0, 0.3);
     }
     
+    .stu5 {
+        background: rgba(255, 217, 0, 0.3);
+    }
+
+    .stu6 {
+        background: rgba(177, 88, 5, 0.493);
+    }
 }
 
-.Developer .stu1 {
-    background: rgba(0, 119, 255, 0.3);
-}
-
-.Developer .stu2 {
-    background: rgba(0, 255, 0, 0.3);
-}
-
-.Developer .stu3 {
-    background: rgba(218, 8, 218, 0.3);
-}
-
-.Developer .stu4 {
-    background: rgba(255, 0, 0, 0.3);
-}
-  
-.Developer .stu5 {
-    background: rgba(255, 217, 0, 0.3);
-}
-
-.Developer .stu6 {
-    background: rgba(177, 88, 5, 0.493);
-}
-
-
+//  ============= Style the button ===============
 .viewbtn{
-
     width: 100%;
     .flex(center, center);
     button {
-        height: 50px;
+        .btn();
         width: 200px;
-        background: @darkPurple;
-        border: none;
-        color: @beige;
-        font-size: 1.4rem;
-        border-radius: 20px;
-        outline: none;
-        margin-top: 10px;
-        box-shadow: 5px 5px  5px #aaaaaa;
 
-        &:hover {
-
-            color: @red;
+        @media @tablet {
+            display: none;
         }
     }
 }
 
-
-
-@media @tablet {
-    button {
-        display: none;
-    }
-}

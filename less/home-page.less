@@ -1,17 +1,15 @@
-// ================== Header Style ============
 
-.header-img {
-    width: 100%;
-}
-
-
-//   ================= Intro Style =================
-
+//  ======================  Styling the main sections(middle of the page) all togather ================
 .section {
     margin-top: 20px;
     .flex(center, stretch);
 
-    @media (max-width:800px) {
+    @media @laptop {
+        .flex(center, center);
+        flex-direction: column-reverse;
+    }
+
+    @media @tablet {
         .flex(center, center);
         flex-direction: column-reverse;
 
@@ -25,21 +23,31 @@
             display: none;
         }
     }
+
     img, iframe{
         width: 20%;
         border-radius: 25px;
         margin-right: 0; 
-        box-shadow: 5px 5px  5px #aaaaaa;
+        .box-shadow;
+        align-self: center;
 
-        @media (max-width:800px) {
+        @media @laptop {
+            width: 90%;
+
+        }
+    
+        @media @tablet {
             width: 90%;
         }
-
+    
         @media @mobile {
             width: 90%;
         }
     }
 
+}
+
+//  ================ Styling the divs Content each content div must have header and paragraph and with or without img =============
     .content {
         .flex(center, start);
         flex-direction: column;
@@ -49,8 +57,14 @@
         background: @lightBeige;
         border-radius: 20px;
 
+        @media @laptop {
+            width: 95%;
+            padding: 10px;
+            margin: 5px;;
+        }
 
-        @media (max-width:800px) {
+
+        @media @tablet {
             width: 95%;
             padding: 10px;
             margin: 5px;;
@@ -62,109 +76,112 @@
             margin: 5px;;
         }
         
-        h2 {
-            color: @darkPurple;
-        }
-
         h2, p{
             text-align: start;
             line-height: 1.7;
         }
 
     }
-}
-iframe {
-    align-self: center;
-}
 
-
+//   ============= styling the last section before the stories ==========
 .youknow {
     padding-bottom: 30px;
     border-bottom : @darkPurple dotted 2px;
-    h5 {
-        color: @darkPurple;
-    }
-
-
-
-}
-
-.mostrecent .read {
-    @media (max-width:800px) {
-        .flex(center,stretch);
-        flex-direction: row;
-        flex-wrap: wrap;
-        
-    }
 }
 
 
 
-.mostrecent h4{
+//  =========== Styling the header of the most recent stories =============
+
+.mostrecentheader {
     font-size: 2rem;
-    color: @darkPurple;
     text-align: start;
     margin-left: 50px;
     margin-top: 30px; 
 }
 
-.stories .story {
-    margin-right: 25px;
-    justify-content: space-between;
-    align-items: stretch;
-    text-align: start;
-    width: 15%;
-    line-height: 1;
-    
-    @media (max-width:800px) {
-        width: 30%;
+//  ============== Styling the big container of the most recent stories ===============
+.stories {
+    margin-top: 20px;
+    .flex(center, start);
 
+    @media @laptop {
+        .flex(center, start);
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
+    @media @tablet {
+        .flex(center, start);
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+    }
 
     @media @mobile {
-        width: 90%;
-    }
-    
-    h3 {
-        line-height: 1.3;
-        color: @darkPurple;
-    }
-    p{
-        margin-top: 10px;
-        font-size: 1.4rem;
-        line-height: 1.2;
-    }
+        flex-direction: column;
+        .flex(center, center);
 
-    img {
-        margin-bottom: 10px;
-        width: 100%;
-        height: 150px;
-        box-shadow: 5px 5px  5px #aaaaaa;
-    }
-
-    .button {
-        height: 50px;
-        background: @darkPurple;
-        border: none;
-        color: @beige;
-        font-size: 1.8rem;
-        border-radius: 20px;
-        outline: none;
-        margin-top: 10px;
-        box-shadow: 5px 5px  5px #aaaaaa;
-
-        &:hover {
-    
-            color: @red;
+        img {
+            display: none;
         }
+    }
+
+
+
+    // ==============  Styling each story separate ==============
+    .story {
+        margin-right: 25px;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: start;
+        width: 18%;
+        line-height: 1;
+
+        img {
+            border-radius: 10px;
+        }
+
+        h3 {
+            font-size: 1.9rem;
+        }
+
+        @media @laptop {
+            width: 30%;
+
+        }
+        
+        @media @tablet {
+            width: 30%;
+
+        }
+
 
         @media @mobile {
-            width: 120px;
-            height: 30px;
-            font-size: 1.3rem;
+            width: 90%;
         }
-     }
+        
+        p{
+            margin-top: 10px;
+            font-size: 1.9rem;
+            line-height: 1.2;
+        }
+
+        img {
+            margin-bottom: 10px;
+            width: 100%;
+            height: 150px;
+            .box-shadow;
+        }
+
+        .button {
+            .btn();
+            background: none;
+            color: @darkPurple;
+            font-size: 1.3rem;
+            box-shadow: none;
+        }
+    }
 }
 
 
