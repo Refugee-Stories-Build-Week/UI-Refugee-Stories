@@ -397,7 +397,7 @@ section {
   }
 }
 .web-names .stu:hover {
-  height: 300px;
+  height: 350px;
 }
 @media (max-width:800px) {
   .web-names .stu:hover {
@@ -437,6 +437,20 @@ section {
   width: 100%;
   text-align: center;
   font-family: 'Indie Flower', cursive;
+}
+.web-names .stu .github {
+  width: 50px;
+}
+@media (max-width:800px) {
+  .web-names .stu .github {
+    width: 40px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width:500px) {
+  .web-names .stu .github {
+    width: 30px;
+  }
 }
 .Developer .stu1 {
   background: rgba(0, 119, 255, 0.3);
