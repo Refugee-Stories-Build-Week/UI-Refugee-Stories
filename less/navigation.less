@@ -1,0 +1,46 @@
+
+.header-content {
+    background: @darkPurple;
+    .flex(space-between, center)
+
+}
+.logo-img {
+    width: 10%;
+
+    @media (max-width:800px) {
+        width: 15%;
+    }
+
+
+    @media @mobile {
+        width: 15%;
+    }
+}
+.nav-bar {
+    .flex(space-around,center);
+    width: 65%;
+
+    a {
+        color: @beige;
+        font-family: @navfont;
+        font-weight: bolder;
+        font-size: 2.5rem;
+        text-decoration: none;
+        &:hover {
+            color:@red;
+        }
+
+        @media (max-width:800px) {
+            font-size: 1.5rem;
+        }
+
+
+
+
+        @media @mobile {
+            font-size: 0.98rem;
+        }
+    }
+
+
+}
