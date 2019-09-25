@@ -1,0 +1,187 @@
+
+//  ======================  Styling the main sections(middle of the page) all togather ================
+.section {
+    margin-top: 20px;
+    .flex(center, stretch);
+
+    @media @laptop {
+        .flex(center, center);
+        flex-direction: column-reverse;
+    }
+
+    @media @tablet {
+        .flex(center, center);
+        flex-direction: column-reverse;
+
+    }
+
+    @media @mobile {
+        flex-direction: column;
+        .flex(center, center);
+
+        img {
+            display: none;
+        }
+    }
+
+    img, iframe{
+        width: 20%;
+        border-radius: 25px;
+        margin-right: 0; 
+        .box-shadow;
+        align-self: center;
+
+        @media @laptop {
+            width: 90%;
+
+        }
+    
+        @media @tablet {
+            width: 90%;
+        }
+    
+        @media @mobile {
+            width: 90%;
+        }
+    }
+
+}
+
+//  ================ Styling the divs Content each content div must have header and paragraph and with or without img =============
+    .content {
+        .flex(center, start);
+        flex-direction: column;
+        padding: 35px;
+        width: 60%;
+        margin-left: 5px;
+        background: @lightBeige;
+        border-radius: 20px;
+
+        @media @laptop {
+            width: 95%;
+            padding: 10px;
+            margin: 5px;;
+        }
+
+
+        @media @tablet {
+            width: 95%;
+            padding: 10px;
+            margin: 5px;;
+        }
+
+        @media @mobile {
+            width: 95%;
+            padding: 10px;
+            margin: 5px;;
+        }
+        
+        h2, p{
+            text-align: start;
+            line-height: 1.7;
+        }
+
+    }
+
+//   ============= styling the last section before the stories ==========
+.youknow {
+    padding-bottom: 30px;
+    border-bottom : @darkPurple dotted 2px;
+}
+
+
+
+//  =========== Styling the header of the most recent stories =============
+
+.mostrecentheader {
+    font-size: 2rem;
+    text-align: start;
+    margin-left: 50px;
+    margin-top: 30px; 
+}
+
+//  ============== Styling the big container of the most recent stories ===============
+.stories {
+    margin-top: 20px;
+    .flex(center, start);
+
+    @media @laptop {
+        .flex(center, start);
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    @media @tablet {
+        .flex(center, start);
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+    }
+
+    @media @mobile {
+        flex-direction: column;
+        .flex(center, center);
+
+        img {
+            display: none;
+        }
+    }
+
+
+
+    // ==============  Styling each story separate ==============
+    .story {
+        margin-right: 25px;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: start;
+        width: 18%;
+        line-height: 1;
+
+        img {
+            border-radius: 10px;
+        }
+
+        h3 {
+            font-size: 1.9rem;
+        }
+
+        @media @laptop {
+            width: 30%;
+
+        }
+        
+        @media @tablet {
+            width: 30%;
+
+        }
+
+
+        @media @mobile {
+            width: 90%;
+        }
+        
+        p{
+            margin-top: 10px;
+            font-size: 1.9rem;
+            line-height: 1.2;
+        }
+
+        img {
+            margin-bottom: 10px;
+            width: 100%;
+            height: 150px;
+            .box-shadow;
+        }
+
+        .button {
+            .btn();
+            background: none;
+            color: @darkPurple;
+            font-size: 1.3rem;
+            box-shadow: none;
+        }
+    }
+}
+
+

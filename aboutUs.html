@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Us</title>
+        <link rel="stylesheet" href="css/aboutUs.css">
+        <meta name = "viewport" content="width = device-width,initial-scale=1.0">
+        <meta charset="utf-8">
+    </head>
+    <header>
+            <nav>
+                <div class = "header-content">
+                    <div class = "logo-img">
+                        <img src="images/rf-logo5.png" altr = "refugee-stories-logo">
+                    </div>
+                    <div class = "nav-bar">
+                        <a href="index.html">Home</a>
+                        <a href="#">Stories</a>
+                        <a href="#">About Us</a>
+                    <div>
+                        <a href="#">Login </a> <span> - </span>
+                        <a href="#">SignUp</a>
+                    </div>
+                    </div>
+                </div>
+            </nav>
+    </header>
+    <body>
+        <section>
+            <img  class = "aboutus-img" src="images/hope.jpg" alt="" width="95%">
+            <div class = "content">
+                <h2 class = "aboutUs">About Us</h2>
+                <p>There are more people displaced in the world today than at any time since the end of World War II and it is more important than ever to help people develop empathy for each other.
+                People visiting the site will gain a better understanding of the refugee crisis and what it means to be a refugee.
+                To raise awareness of the refugee crisis by telling the story of those that have been displaced by conflict or disaster.</p>
+            </div>
+        </section>
+        <section>
+            <div class = "Developer">
+                <h2>" TRY TO BE A RAINBOW IN SOMEONE ELSE'S CLOUD "</h2>
+                <div class = "web-names">
+                    <div  id = "1" class = "stu stu1">
+                        <h3>   Jonathan Taylor</h3>
+                        <img src="images/JonathanT.jpg" alt="JonathanT"><br><br>
+                        <p>Project Lead</p><br>
+                        <a href="https://github.com/jonyonson" target="_blank"><img  class = "github" src="images/github.png" alt="github"></a>
+                    </div>
+                    <div  id = "2" class = "stu stu2">
+                        <h3>Dennis Mercado</h3>
+                        <img src="images/Dennis.jpg" alt="Dennis"><br><br>
+                        <p>Backend Architect</p><br>
+                        <a href="https://github.com/denmercs" target="_blank"><img  class = "github" src="images/github.png" alt="github"></a>
+                        </div>
+                    <div  id = "3" class = "stu stu3">
+                        <h3>Sara Alkhamri</h3>
+                        <img src="images/Sara.JPG" alt="Sara"><br><br>
+                        <p>Front End Architect</p><br>
+                        <a href="https://github.com/Sara-Alkhamri" target="_blank"><img  class = "github" src="images/github.png" alt="github"></a>
+                    </div>
+                    <div  id = "4" class = "stu stu4">
+                        <h3>Jonathan Mendoza</h3>
+                        <img src="images/JonathanM.jpg" alt="JonathanM"><br><br>
+                        <p>Front End Architect</p><br>
+                        <a href="https://github.com/Jnmendza" target="_blank"><img  class = "github" src="images/github.png" alt="github"></a>
+                    </div>
+                    <div id = "5" class = "stu stu5">
+                        <h3>Keshawn Sharper</h3>
+                        <img src="images/Keshawn.jpg" alt="Keshawn"><br><br>
+                        <p>Front End Architect</p><br>
+                        <a href="https://github.com/KeshawnSharper" target="_blank"><img  class = "github" src="images/github.png" alt="github"></a>
+                    </div>
+                    <div id = "6"  class = "stu stu6">
+                        <h3>Ruwaidah Alfakhri</h3>
+                        <img src="images/ruwaidah.jpg" alt="Ruwaidah"><br><br>
+                        <p>Web UI Developer</p><br>
+                        <a href="https://github.com/Ruwaidah" target="_blank"><img  class = "github" src="images/github.png" alt="github"></a>
+                    </div>
+                </div>
+        </section>
+        <div class = "viewbtn" id = "view">
+        <button onclick="onClick()">View All..</button>
+    </div>
+        <footer>
+            <p>Refugee Stories - 2019</p>
+        </footer>
+    </body>
+    <script>
+        function onClick() {
+            document.getElementById("1").style.height = '350px';
+            document.getElementById("2").style.height = '350px';
+            document.getElementById("3").style.height = '350px';
+            document.getElementById("4").style.height = '350px';
+            document.getElementById("5").style.height = '350px';
+            document.getElementById("6").style.height = '350px';
+            document.getElementById('view').style.display = "none";
+        }
+    </script>
+</html>
