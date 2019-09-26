@@ -4,15 +4,31 @@
     margin-top: 20px;
     .flex(center, stretch);
 
+    .def-img {
+        width: 25%;
+        .box-shadow;
+        border-radius: 25px;
+    }
+
+    iframe{
+        width: 30%;
+        border-radius: 25px;
+        margin-right: 0; 
+        .box-shadow;
+        align-self: center;
+
+        @media @laptop {
+            width: 90%;
+        }
+    }
+
     @media @laptop {
         .flex(center, center);
         flex-direction: column-reverse;
-    }
 
-    @media @tablet {
-        .flex(center, center);
-        flex-direction: column-reverse;
-
+        .def-img {
+            width:90%;
+        }
     }
 
     @media @mobile {
@@ -23,28 +39,6 @@
             display: none;
         }
     }
-
-    img, iframe{
-        width: 20%;
-        border-radius: 25px;
-        margin-right: 0; 
-        .box-shadow;
-        align-self: center;
-
-        @media @laptop {
-            width: 90%;
-
-        }
-    
-        @media @tablet {
-            width: 90%;
-        }
-    
-        @media @mobile {
-            width: 90%;
-        }
-    }
-
 }
 
 //  ================ Styling the divs Content each content div must have header and paragraph and with or without img =============
@@ -54,8 +48,12 @@
         padding: 35px;
         width: 60%;
         margin-left: 5px;
-        background: @lightBeige;
         border-radius: 20px;
+
+        h2, p{
+            text-align: start;
+            line-height: 1.7;
+        }
 
         @media @laptop {
             width: 95%;
@@ -69,18 +67,6 @@
             padding: 10px;
             margin: 5px;;
         }
-
-        @media @mobile {
-            width: 95%;
-            padding: 10px;
-            margin: 5px;;
-        }
-        
-        h2, p{
-            text-align: start;
-            line-height: 1.7;
-        }
-
     }
 
 //   ============= styling the last section before the stories ==========
@@ -104,74 +90,59 @@
 .stories {
     margin-top: 20px;
     .flex(center, start);
+    flex-direction: column;
 
     @media @laptop {
-        .flex(center, start);
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    @media @tablet {
-        .flex(center, start);
-        flex-direction: row;
-        flex-wrap: wrap;
-        
+        flex-direction: column;
     }
 
     @media @mobile {
-        flex-direction: column;
-        .flex(center, center);
-
-        img {
-            display: none;
-        }
+        align-items: center;
     }
 
 
 
     // ==============  Styling each story separate ==============
     .story {
-        margin-right: 25px;
-        justify-content: space-between;
-        align-items: flex-start;
-        text-align: start;
-        width: 18%;
+        flex-direction: row;
+        justify-content: center;
+        width: 90%;
         line-height: 1;
 
         img {
             border-radius: 10px;
+            margin-bottom: 10px;
+            margin-right: 30px;
+            width: 20%;
+            .box-shadow;
+        }
+
+        div {
+            width:60%;
+            .flex(start, start);
+            flex-direction: column;
+
+            @media @mobile {
+                width: 95%;
+            }
         }
 
         h3 {
-            font-size: 1.9rem;
+            font-size: 2.3rem;
+
+            @media @mobile {
+                font-size: 1.7rem;
+            }
         }
 
-        @media @laptop {
-            width: 30%;
-
-        }
-        
-        @media @tablet {
-            width: 30%;
-
-        }
-
-
-        @media @mobile {
-            width: 90%;
-        }
-        
         p{
             margin-top: 10px;
             font-size: 1.9rem;
             line-height: 1.2;
-        }
 
-        img {
-            margin-bottom: 10px;
-            width: 100%;
-            height: 150px;
-            .box-shadow;
+            @media @mobile {
+                font-size: 1.5rem;
+            }
         }
 
         .button {
@@ -180,6 +151,29 @@
             color: @darkPurple;
             font-size: 1.3rem;
             box-shadow: none;
+            font-weight: bold;
+        }
+
+        @media @laptop {
+            width: 95%;
+
+        }
+
+        @media @tablet {
+            img {
+                width: 30%;
+            }
+        }
+
+        @media @mobile {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 75%;  
+                margin-right: 0;         
+             }
         }
     }
 }
