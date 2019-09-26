@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Indie Flower';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Indie Flower'), local('IndieFlower'), url(https://fonts.gstatic.com/s/indieflower/v11/m8JVjfNVeKWVnh3QMuKkFcZVaUuC.ttf) format('truetype');
+}
 .box-shadow {
   box-shadow: 5px 5px 5px #aaaaaa;
 }
@@ -181,13 +188,6 @@ input,
 select {
   vertical-align: middle;
 }
-@font-face {
-  font-family: 'Indie Flower';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Indie Flower'), local('IndieFlower'), url(https://fonts.gstatic.com/s/indieflower/v11/m8JVjfNVeKWVnh3QMuKkFcZVaUuC.ttf) format('truetype');
-}
 html {
   font-size: 63.5%;
   font-family: 'Yanone Kaffeesatz', 'sans-serif';
@@ -197,7 +197,7 @@ html h2,
 html h3,
 html h4,
 html h5 {
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
   color: #3c3c54;
 }
@@ -232,7 +232,7 @@ p {
 }
 @media (max-width:500px) {
   p {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 }
 img {
@@ -245,7 +245,7 @@ img {
   align-items: center;
 }
 .logo-img {
-  width: 10%;
+  width: 9%;
 }
 @media (max-width: 800px) {
   .logo-img {
@@ -261,36 +261,36 @@ img {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 65%;
-}
-.nav-bar a,
-.nav-bar span {
-  color: #ffeedb;
-  font-family: 'Indie Flower', cursive;
-  font-weight: bolder;
-  font-size: 2.5rem;
-  text-decoration: none;
-}
-.nav-bar a:hover,
-.nav-bar span:hover {
-  color: #e04f56;
+  width: 40%;
 }
 @media (max-width:1100px) {
-  .nav-bar a,
-  .nav-bar span {
-    font-size: 1.7rem;
+  .nav-bar {
+    width: 60%;
   }
 }
 @media (max-width:800px) {
-  .nav-bar a,
-  .nav-bar span {
+  .nav-bar {
+    width: 75%;
+  }
+}
+.nav-bar a {
+  color: #ffeedb;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  text-decoration: none;
+  margin-right: 10px;
+}
+.nav-bar a:hover {
+  color: #e04f56;
+}
+@media (max-width:1100px) {
+  .nav-bar a {
     font-size: 1.5rem;
   }
 }
 @media (max-width:500px) {
-  .nav-bar a,
-  .nav-bar span {
-    font-size: 0.98rem;
+  .nav-bar a {
+    font-size: 0.7rem;
   }
 }
 footer p {
@@ -329,27 +329,11 @@ section {
   text-align: center;
 }
 .content .aboutUs {
-  font-size: 5rem !important;
+  font-size: 5rem ;
+  font-family: 'Indie Flower', cursive;
 }
 @media (max-width:500px) {
   .content h2 {
-    font-size: 1.5rem;
-  }
-}
-.Developer {
-  width: 100%;
-  height: 500px;
-}
-.Developer h2 {
-  text-align: center;
-  color: #3c3c54;
-  margin: 30px 0 30px 0;
-}
-@media (max-width:800px) {
-  .Developer {
-    height: auto;
-  }
-  .Developer h2 {
     font-size: 1.5rem;
   }
 }
@@ -374,6 +358,9 @@ section {
   overflow: hidden;
   border-radius: 5px;
   box-shadow: 3px 3px 5px #aaaaaa;
+}
+.web-names .stu h3 {
+  font-family: 'Indie Flower', cursive;
 }
 @media (max-width:1100px) {
   .web-names .stu {
@@ -437,6 +424,7 @@ section {
   width: 100%;
   text-align: center;
   font-family: 'Indie Flower', cursive;
+  font-weight: bold;
 }
 .web-names .stu .github {
   width: 50px;
@@ -450,6 +438,24 @@ section {
 @media (max-width:500px) {
   .web-names .stu .github {
     width: 30px;
+  }
+}
+.Developer {
+  width: 100%;
+  height: 500px;
+}
+.Developer h2 {
+  text-align: center;
+  color: #3c3c54;
+  margin: 30px 0 30px 0;
+  font-family: 'Indie Flower', cursive;
+}
+@media (max-width:800px) {
+  .Developer {
+    height: auto;
+  }
+  .Developer h2 {
+    font-size: 1.5rem;
   }
 }
 .Developer .stu1 {

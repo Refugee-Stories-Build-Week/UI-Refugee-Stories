@@ -5,7 +5,7 @@
 
 }
 .logo-img {
-    width: 10%;
+    width: 9%;
 
     @media (max-width:800px) {
         width: 15%;
@@ -18,32 +18,33 @@
 }
 .nav-bar {
     .flex(space-around,center);
-    width: 65%;
+    width: 40%;
 
-    a, span{
+    @media @laptop {
+        width: 60%;
+    }
+
+    @media @tablet {
+        width: 75%;
+    }
+
+    a{
         color: @beige;
         font-family: @navfont;
-        font-weight: bolder;
-        font-size: 2.5rem;
+        font-size: 1.6rem;
         text-decoration: none;
+        margin-right: 10px;
         &:hover {
             color:@red;
         }
 
         @media @laptop {
-            font-size: 1.7rem;
-        }
-
-
-        @media @tablet {
             font-size: 1.5rem;
         }
 
 
-
-
         @media @mobile {
-            font-size: 0.98rem;
+            font-size: 0.7rem;
         }
     }
 
